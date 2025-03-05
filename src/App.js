@@ -23,7 +23,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 const App = () => {
-  let baseUrl="http://localhost:5001"
+  let baseUrl="https://admin-panel-server-rust.vercel.app"
   const theme = useTheme();
 
   const [users, setUsers] = useState([]);

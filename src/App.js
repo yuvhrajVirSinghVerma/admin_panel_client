@@ -117,8 +117,8 @@ const App = () => {
 
         <Grid container spacing={4} sx={{ mb: 5 }}>
           <Grid item xs={12} md={6}>
-            <CardStyled>
-              <CardContent>
+            {/* <CardStyled>
+              <CardContent> */}
                 <Typography variant="h5" gutterBottom color="primary">
                   Add New User
                 </Typography>
@@ -128,8 +128,12 @@ const App = () => {
                   fullWidth
                   margin="normal"
                   value={newUser.name}
-                  onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
+                  onChange={(e) =>{
+                    console.log(e.target.value)
+                    setNewUser({ name: e.target.value })
+                  }}
                   sx={{ borderRadius: '8px' }}
+                  focused
                 />
                 <TextField
                   label="Email"
@@ -149,8 +153,8 @@ const App = () => {
                 >
                   Add User
                 </ButtonStyled>
-              </CardContent>
-            </CardStyled>
+              {/* </CardContent>
+            </CardStyled> */}
           </Grid>
 
           <Grid item xs={12} md={6}>

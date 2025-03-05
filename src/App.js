@@ -128,12 +128,8 @@ const App = () => {
                   fullWidth
                   margin="normal"
                   value={newUser.name}
-                  onChange={(e) =>{
-                    console.log(e.target.value)
-                    setNewUser({ name: e.target.value })
-                  }}
+                  onChange={(e) => setNewUser({ ...newUser, name: e.target.value })}
                   sx={{ borderRadius: '8px' }}
-                  focused
                 />
                 <TextField
                   label="Email"
